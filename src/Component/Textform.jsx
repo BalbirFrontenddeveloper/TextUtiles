@@ -2,7 +2,7 @@ import React from 'react'
 import { useGlobalContext } from '../Context'
 
 const Textform = () => {
-
+    
     const { text, setText, uppercase, lowercase, clear } = useGlobalContext();
   return (
     <div className='textform'>
@@ -18,12 +18,12 @@ const Textform = () => {
             </form>
         </div>
         <div className='btn'>
-            <button onClick={() => {uppercase()}}></button>
-            <button onClick={() => {lowercase()}}></button>
-            <button onClick={() => {clear()}}></button>
+            <button onClick={() => {uppercase()}}>Conver to uppercase</button>
+            <button onClick={() => {lowercase()}}>convert to lowercase</button>
+            <button onClick={() => {clear()}}>clear</button>
         </div>
     </div>
   )
 }
 
-export default Textform
+export default Textform;

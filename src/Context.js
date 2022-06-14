@@ -1,44 +1,14 @@
-import { createContext, useContext, useReducer } from "react";
-import reducer from "./Reducer";
+import { createContext, useContext } from "react";
 
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-
-    const initialstate = {
-        text: "",
-
-    }
-
-    const [state, dispatch] = useReducer(reducer, initialstate);
-
-    const setText = (textareastate) => {
-        dispatch({
-            type: "SET_TEXTAREASTATE",
-            payload: textareastate
-        });
-    };
-
-    const uppercase = () => {
-        dispatch({
-            type: "UPPERCASE"
-        });
-    };
-
-    const lowercase = () => {
-        dispatch({
-            type: "Lowercase"
-        });
-    };
-
-    const clear = () => {
-        dispatch({
-            type: "CLEAR"
-        });
-    };
+    // const uppercase = () => {
+    //     setText("")
+    // }
 
     return (
-        <AppContext.Provider value={{...state, setText, uppercase, lowercase, clear}}>
+        <AppContext.Provider value={{}}>
             { children }
         </AppContext.Provider>
     );
