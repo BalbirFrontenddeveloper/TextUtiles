@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = (props) => {
   return (
     <>
-      <div className="nav-div" style=`${}`>
+      <div className="nav-div" style={{color: `${'red'}`, backgroundColor: `${'yellow'}`}}>
         <nav>
           <div className="logo">
             <h1>TextUtiles</h1>
