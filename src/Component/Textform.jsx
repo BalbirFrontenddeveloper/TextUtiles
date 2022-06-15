@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
+// import { useGlobalContext } from '../Context'
 
-const Textform = () => {
+const Textform = (props) => {
+
+    // , uppercase, lowercase, clear
+
+    // const { text, setText, uppercase, lowercase, clear } = useGlobalContext();
 
     const [text, setText] = useState("");
 
@@ -8,16 +13,19 @@ const Textform = () => {
         let newtext;
         newtext = text.toUpperCase();
         setText(newtext);
+        props.showAlert("Converted to uppercase","success");
     }
 
     const lowercase = () => {
         let newtext;
         newtext = text.toLowerCase();
         setText(newtext);
+        props.showAlert("Converted to lowercase","success")
     }
 
     const clear = () => {
         setText("");
+        props.showAlert("Test has been cleared","success")
     }
 
   return (
