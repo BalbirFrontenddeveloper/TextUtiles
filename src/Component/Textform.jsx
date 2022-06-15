@@ -29,7 +29,7 @@ const Textform = (props) => {
     }
 
   return (
-    <div className='textform' style={{backgroundColor: "white", color: "black"}}>
+    <div className='textform' style={{color:`${props.mode==='white' ? 'black' : 'white'}`, backgroundColor:`${props.mode==='white' ? 'white' : 'grey'}`}}>
         <h2>Try TextUtiles : Word counter</h2>
         <div className='form'>
             <form onSubmit={(e) => e.preventDefault}>
@@ -40,6 +40,7 @@ const Textform = (props) => {
                 onChange={(e) => {setText(e.target.value)}}
                 rows="10"
                 cols="80"
+                style={{color:`${props.mode==='white' ? 'black' : 'white'}`, backgroundColor:`${props.mode==='white' ? 'white' : '#2b5197'}`}}
                 />
             </form>
         </div>

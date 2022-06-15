@@ -24,14 +24,17 @@ const App = () => {
   };
 
   const toggleMode = () => {
-    if(toggleText==="Enable dark mode"){
+    if(mode==='white'){
       setMode('black');
       setToggleText("Disable dark mode");
       showAlert('Dark mode enabled','success');
+      document.body.style.backgroundColor='grey';
     } else {
       setMode('white')
       setToggleText("Enable dark mode");
       showAlert('Light mode enables','sucess');
+      document.body.style.backgroundColor='white';
+
     }
   }
 
